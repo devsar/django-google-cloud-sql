@@ -28,5 +28,8 @@ handlers:
   static_dir: django/contrib/admin/media
   expiration: '0'
 
+- url: /commands/.*
+  script: gaecommands/__init__.py
+
 - url: /.*
   script: djangoappengine_rdbms/main/main.py
